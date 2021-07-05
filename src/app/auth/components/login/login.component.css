@@ -1,0 +1,49 @@
+.login-input{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-action{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.login-form-container{
+    width: 18%;
+}
+.login-form{
+    padding: 15%;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .login-form-container{
+        width: 70%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .login-form-container{
+        width: 50%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .login-form-container{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .login-form-container{ 
+        width: 50%;
+    }
+}

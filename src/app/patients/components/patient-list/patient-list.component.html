@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary pull-right" (click)="onAdd()">Add Patient</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table mb-0" *ngIf="patientList$ | async as patientList else noData">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Gender</th>
+                        <th>Registration Date</th>
+                        <th>Mobile</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let patient of patientList">
+                    <tr>
+                        <td>{{ patient.firstName }} {{ patient.lastName }}</td>
+                        <td>{{ patient.gender }}</td>
+                        <td>{{ patient.createdDate | date}}</td>
+                        <td>{{ patient.mobile }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<ng-template #noData>No Data Available</ng-template>
+<div class="alert alert-danger" *ngIf="errorMessage">
+    {{ errorMessage }}
+</div>
