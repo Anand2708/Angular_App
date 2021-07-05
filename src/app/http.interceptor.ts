@@ -11,10 +11,11 @@ import {
 
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { CommonService } from './shared/services/common.service';
 
 @Injectable()
 export class HttpAuthInterceptor implements HttpInterceptor {
-    constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService,private commonService: CommonService ) { }
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
 
@@ -32,6 +33,7 @@ export class HttpAuthInterceptor implements HttpInterceptor {
             }),
             catchError((error: HttpErrorResponse) => {
                 console.error(error.message);
+                this.commonService.hideSpinner()
                 return throwError(error);
             }));
     }

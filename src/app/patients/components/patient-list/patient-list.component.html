@@ -6,13 +6,13 @@
     <div class="card-body">
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <button type="button" class="btn btn-primary pull-right" (click)="onAdd()">Add Patient</button>
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary float-right" (click)="onAdd()">Add Patient</button>
                 </div>
             </div>
         </div>
 
-        <div class="table-responsive">
+        <div class="table-responsive mt-2">
             <table class="table mb-0" *ngIf="patientList$ | async as patientList else noData">
                 <thead>
                     <tr>

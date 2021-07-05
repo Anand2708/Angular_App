@@ -1,3 +1,7 @@
+
+.card{
+    width:55%;
+}
 .login-input{
     display: flex;
     justify-content: center;
@@ -24,26 +28,26 @@
 @media only screen and (max-width: 600px) {
 
     .login-form-container{
-        width: 70%;
+        width: 60% !important;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     .login-form-container{
-        width: 50%;
+        width: 50% !important;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
     .login-form-container{
-        width: 50%;
+        width: 50% !important;
     }
 }
 
 @media only screen and (max-width: 1024px) {
     .login-form-container{ 
-        width: 50%;
+        width: 50% !important;
     }
 }
